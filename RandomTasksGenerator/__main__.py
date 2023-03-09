@@ -1,11 +1,11 @@
-
+import __future__
 import sys
 import json
 from random import randint
 
-def main(args: list[str]):
-    minT = sys.argv[0]
-    maxT = sys.argv[1]
+def main(args: list):
+    minT = args[0]
+    maxT = args[1]
     minT = int(minT)
     maxT = int(maxT)
     values = range(minT,maxT)
@@ -81,7 +81,7 @@ def main(args: list[str]):
             
 
 if __name__ == "__main__":
-    argv: list[str] = sys.argv[1:]
+    argv: list = sys.argv[1:]
     main(argv)
 
 
