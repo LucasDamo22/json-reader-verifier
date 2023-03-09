@@ -4,8 +4,8 @@ import json
 from random import randint
 
 def main(args: list[str]):
-    minT = sys.argv[1]
-    maxT = sys.argv[2]
+    minT = sys.argv[0]
+    maxT = sys.argv[1]
     minT = int(minT)
     maxT = int(maxT)
     values = range(minT,maxT)
