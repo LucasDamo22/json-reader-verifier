@@ -3,9 +3,9 @@ import sys
 import json
 from random import randint
 
-def main(args: list):
-    minT = args[0]
-    maxT = args[1]
+def main():
+    minT = sys.argv[1]
+    maxT = sys.argv[2]
     minT = int(minT)
     maxT = int(maxT)
     values = range(minT,maxT)
@@ -26,6 +26,7 @@ def main(args: list):
         max_parcelas = int(max_parcelas)
         #print(max_parcelas)
 
+        #RandomTasksGenerator/data
 
         num_parcelas = randint(min_parcelas,max_parcelas)
         
@@ -65,7 +66,7 @@ def main(args: list):
         #for i in range(0,num_parcelas):
             #print(parcelasSuperiores[i],"/",parcelas[i])
             
-        filename = f'./data/{z}.json'
+        filename = f'RandomTasksGenerator/data/{z}.json'
         arqOutJson = {
                 'Processos':{
 
@@ -81,8 +82,8 @@ def main(args: list):
             
 
 if __name__ == "__main__":
-    argv: list = sys.argv[1:]
-    main(argv)
+    main()
+
 
 
 
