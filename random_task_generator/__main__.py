@@ -3,7 +3,7 @@ import sys
 import json
 from random import randint
 
-def main():
+def rtg():
 
     minT = sys.argv[1]
     maxT = sys.argv[2]
@@ -58,7 +58,7 @@ def main():
             parcelasSuperiores.append((aux * UTILIZACAO_ALVO)/num_parcelas)
         
 
-        filename = f'RandomTasksGenerator/data/{z}.json'
+        filename = f'cpu_usage_calculator/data/{z}.json'
         arqOutJson = {
                 'Processos':{
 
@@ -74,7 +74,7 @@ def main():
             
 
 if __name__ == "__main__":
-    main()
+    rtg()
 
 
 
